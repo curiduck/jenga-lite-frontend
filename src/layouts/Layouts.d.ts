@@ -1,5 +1,6 @@
 import React from "react";
 
 export type DefaultLayoutType = {
-  children: React.ReactNode
+  children: React.ReactNode,
+  px?: string
 }

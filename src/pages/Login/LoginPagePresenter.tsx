@@ -26,7 +26,7 @@ const LoginFields = styled.div`
   height: 500px;
   top: calc(50vh - 250px);
   left: calc(50vw - 400px);
-  
+  background: rgba(255, 255, 255, 0.8);
 `
 
 const BackgroundVideo = styled.video`

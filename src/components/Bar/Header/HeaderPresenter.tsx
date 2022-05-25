@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Center, HStack, Spacer,Text, Avatar, LinkBox} from '@chakra-ui/react'
 import { NavigationButtonPropsType } from './HeaderTypes';
+import { Link } from 'react-router-dom';
 
 const HeaderPresenter = () => (
 
@@ -10,19 +11,21 @@ const HeaderPresenter = () => (
     </LinkBox>
     <Spacer/>
     <HStack pr={20}>
-    <NavigationButton label={'블록 피드'} />
-    <NavigationButton label={'블록 쌓기'}/>
-    <NavigationButton label={'내 블록'}/>
+    <NavigationButton label={'블록 피드'} linkUrl={'/block/feed'} />
+    <NavigationButton label={'블록 쌓기'} linkUrl={'/block/create'}/>
+    <NavigationButton label={'내 블록'} linkUrl={'/block/myblock'}/>
     <Avatar size={'sm'}/>
     </HStack>
   </HStack>)
 
 
 
-const NavigationButton = React.memo(({label='', onClick=()=>{}}:NavigationButtonPropsType) => (
+const NavigationButton = React.memo(({label='', onClick=()=>{}, linkUrl="#"}:NavigationButtonPropsType) => (
 <Box height='80px' minW={'120px'} w={30} onClick={onClick}>
   <Center w={'100%'} h={'100%'}>
-    <Text fontSize='md' fontWeight={500} color={'white'} cursor={'pointer'}>{label}</Text>
+    <Link to={linkUrl}>
+      <Text fontSize='md' fontWeight={500} color={'white'} cursor={'pointer'}>{label}</Text>
+    </Link>
   </Center>
 </Box>));
 

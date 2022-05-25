@@ -7,7 +7,7 @@ const BlockFeedPagePresenter = () => {
   return (
     <DefaultLayout>
       <>
-      <VStack w={'100%'} mt={'90px'} spacing={8}>
+      <VStack w={'100%'} mt={'20px'} spacing={8}>
       {[...Array(10)].map((_, i)=>(<DefaultBlock key={i}/>))}
       </VStack>
       </>
