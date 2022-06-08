@@ -45,7 +45,7 @@ const StackBlockPresenter = () => (<>
         </HStack>
         <SimpleGrid columns={3} spacing={5} mt={10}>
           {[...Array(20)].map(()=><BookMarkCard boxProps={{margin: 0, cursor: 'default'}}>
-          <RemoveCircleOutlineIcon style={{position: 'absolute', margin: '-20px', cursor: 'pointer', fontSize: '25px'}} />
+          <RemoveCircleOutlineIcon style={{position: 'absolute', margin: '-13px', cursor: 'pointer', fontSize: '25px'}} />
             <VStack >
               <Box h={'150px'}  overflow={'hidden'}>
                 <Image w={'100%'} objectFit='cover' src='https://bit.ly/dan-abramov' alt='Dan Abramov' />

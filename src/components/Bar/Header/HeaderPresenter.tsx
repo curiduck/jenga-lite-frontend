@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const HeaderPresenter = () => (
 
-  <HStack h={'80px'} w={'100%'}  shadow='md' position='fixed' bgColor={'#8D8DAA'} zIndex={999}>
+  <HStack h={'60px'} w={'100%'}  shadow='md' position='fixed' bgColor={'#8D8DAA'} zIndex={999}>
     <LinkBox>
       <Text p={20} fontSize='2xl' fontWeight={700} color={'#FFFFFF'}>Jenga</Text>
     </LinkBox>
@@ -14,6 +14,8 @@ const HeaderPresenter = () => (
     <NavigationButton label={'블록 피드'} linkUrl={'/block/feed'} />
     <NavigationButton label={'블록 쌓기'} linkUrl={'/block/create'}/>
     <NavigationButton label={'내 블록'} linkUrl={'/block/myblock'}/>
+    <NavigationButton label={'내 북마크'} linkUrl={'/bookmark/mybookmark'}/>
+
     <Avatar size={'sm'}/>
     </HStack>
   </HStack>)
